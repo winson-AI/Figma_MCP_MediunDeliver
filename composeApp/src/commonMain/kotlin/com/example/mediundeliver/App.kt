@@ -152,7 +152,10 @@ private fun HeaderSection() {
             color = Color(0xFFF8F8F8),
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
-            fontFamily = FontFamily.SansSerif // League Spartan Bold
+            fontFamily = FontFamily.SansSerif, // League Spartan Bold
+            modifier = Modifier
+                .weight(1f)                    // 占剩余宽度
+                .wrapContentWidth(Alignment.CenterHorizontally) // 自身水平居中
         )
     }
 }
@@ -409,8 +412,8 @@ private fun BottomNavigationBar() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             NavigationIcon(Res.drawable.ic_tab_home)
-            NavigationIcon(Res.drawable.ic_tab_search)
             NavigationIcon(Res.drawable.ic_tab_orders)
+            NavigationIcon(Res.drawable.ic_tab_search)
             NavigationIcon(Res.drawable.ic_tab_favorites)
             NavigationIcon(Res.drawable.ic_tab_profile)
         }
